@@ -31,7 +31,7 @@
     "react-redux": "^4.4.2",
     "redux": "^3.4.0",
     "uglify-js": "^2.6.2",
-    "webpack": "^1.12.15",
+    "webpack": "^1.12.15"
   },
   "devDependencies": {
     "webpack-dev-server": "^1.14.1",
