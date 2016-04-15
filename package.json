@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-todo",
+  "name": "component-test",
   "version": "1.0.0",
-  "description": "A todo list app built with React and Redux",
+  "description": "Experimenting with React components",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/palmerev/react-redux-todo.git"
+    "url": "git+https://github.com/palmerev/component-test.git"
   },
   "keywords": [
     "react"
@@ -17,9 +17,9 @@
   "author": "Evan Palmer",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/palmerev/react-redux-todo/issues"
+    "url": "https://github.com/palmerev/component-test/issues"
   },
-  "homepage": "https://github.com/palmerev/react-redux-todo#readme",
+  "homepage": "https://github.com/palmerev/component-test#readme",
   "dependencies": {
     "babel-core": "^6.7.4",
     "babel-loader": "^6.2.4",
