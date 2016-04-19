@@ -3,10 +3,10 @@ import { PropTypes } from 'react'
 import ReactDOM from 'react-dom'
 import { createStore } from 'redux'
 
-import Main from './components/Main'
+import App from './components/App'
 
 
 ReactDOM.render(
-  <Main />,
+  <App />,
   document.getElementById('app')
 )
