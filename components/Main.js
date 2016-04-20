@@ -1,8 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import SliderExample from './SliderExample'
+import Slider from './Slider'
 import NVD3Chart from 'react-nvd3'
+
+//Slider constants
+const sliderMin = 0;
+const sliderMax = 500;
+const defaultValue = 100;
+const step = 50;
+const yDomainMax = 1000;
+const marks = {
+  0: '$0',
+  200: '$200',
+  700: '$700',
+};
 
 export default class Main extends React.Component {
   constructor() {
@@ -10,6 +22,8 @@ export default class Main extends React.Component {
     this.state = {
       val1: 100,
       val2: 100,
+      min: 0,
+      max: 500,
     }
     this.handleOnChange1 = this.handleOnChange1.bind(this)
     this.handleOnChange2 = this.handleOnChange2.bind(this)
@@ -43,20 +57,34 @@ export default class Main extends React.Component {
       }
     ];
 
-    var chart = nv.models.multiBarHorizontalChart();
-    chart.multibar.stacked(true); // default to stacked
-    //chart.showControls(false); // don't show controls
+    var chart = nv.models.multiBarHorizontalChart()
+      .stacked(true) // default to stacked
+      .showValues(true)
+      .showControls(false)
+      .yDomain([this.state.min, yDomainMax])
+      .height(150);
     d3.select('#chart svg').datum(TestData).transition().duration(500).call(chart);
     nv.utils.windowResize(chart.update);
 
     return (
       <div>
-        <SliderExample
+        <Slider
+          dots
           val={this.state.val1}
-          handleOnChange={this.handleOnChange1} />
-        <SliderExample
+          handleOnChange={this.handleOnChange1}
+          min={sliderMin}
+          max={sliderMax}
+          defaultValue={defaultValue}
+          step={step}
+          marks={marks}
+          />
+        <Slider
           val={this.state.val2}
-          handleOnChange={this.handleOnChange2} />
+          handleOnChange={this.handleOnChange2}
+          min={sliderMin}
+          max={sliderMax}
+          defaultValue={defaultValue}
+          step={step}/>
       </div>
     )
   }
