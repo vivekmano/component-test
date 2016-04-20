@@ -30,10 +30,12 @@
     "nvd3": "^1.8.2",
     "rc-slider": "^3.6.0",
     "react": "^0.14.7",
+    "react-d3-shape": "^0.2.15",
     "react-dom": "^0.14.7",
     "react-redux": "^4.4.2",
     "redux": "^3.4.0",
     "uglify-js": "^2.6.2",
+    "victory": "^0.6.0",
     "webpack": "^1.12.15"
   },
   "devDependencies": {
