@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import SliderExample from './SliderExample'
 
-export default class App extends React.Component {
+export default class Main extends React.Component {
   constructor() {
     super()
     this.state = {
